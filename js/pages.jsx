@@ -262,6 +262,9 @@ function ArticleBody({ blocks, variant }) {
             <span className="attr">{b.attr}</span>
           </blockquote>
         );
+        if (b.type === 'md') return (
+          <div key={i} className="md-block" dangerouslySetInnerHTML={{ __html: marked.parse(b.text) }} />
+        );
         return null;
       })}
     </>

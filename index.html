@@ -722,6 +722,35 @@ button { font-family: inherit; cursor: pointer; }
   transition: width 0.1s linear;
 }
 
+/* ─── Markdown block (md type) ─── */
+.md-block { margin: 0 0 1.1em; }
+.md-block p { margin: 0 0 1em; }
+.md-block table {
+  width: 100%; border-collapse: collapse;
+  font-family: var(--serif-body); font-size: 0.93em;
+  margin: 1.2em 0;
+}
+.md-block th {
+  font-family: var(--display-sc); letter-spacing: 0.12em; font-size: 0.82em;
+  color: var(--ink-soft); background: var(--paper-dark);
+  border: 1px solid var(--rule); padding: 8px 12px;
+  text-align: left; font-weight: 400;
+}
+.md-block td {
+  border: 1px solid var(--rule-soft); padding: 7px 12px;
+  color: var(--ink); vertical-align: top;
+}
+.md-block tr:nth-child(even) td { background: var(--paper-light); }
+.md-block strong { color: var(--moss-deep); font-weight: 600; }
+.md-block em { font-style: italic; color: var(--ink-soft); }
+.md-block code {
+  font-family: var(--mono); font-size: 0.88em;
+  background: var(--paper-dark); padding: 1px 5px;
+  border: 1px solid var(--rule-soft);
+}
+.md-block ul, .md-block ol { padding-left: 1.4em; margin: 0 0 1em; }
+.md-block li { margin-bottom: 0.3em; }
+
 /* Variant switcher */
 .variant-switch {
   position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
@@ -811,6 +840,7 @@ button { font-family: inherit; cursor: pointer; }
 
 <!-- Speaker notes etc. not needed -->
 
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
