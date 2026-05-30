@@ -832,6 +832,118 @@ button { font-family: inherit; cursor: pointer; }
   font-size: 16px; color: var(--ink);
 }
 .prev-next .next { text-align: right; }
+
+/* ─── Mobile responsive ─── */
+@media (max-width: 768px) {
+
+  /* Container padding */
+  .wrap, .wrap-narrow {
+    padding: 0 20px;
+  }
+
+  /* Masthead */
+  .masthead h1 {
+    font-size: 48px;
+  }
+  .masthead .tagline {
+    font-size: 16px;
+  }
+  .masthead .meta-bar {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  .masthead .nav-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .lamp-toggle {
+    position: static;
+    margin: 8px auto 0;
+  }
+
+  /* Featured card → single column */
+  .featured-card {
+    grid-template-columns: 1fr;
+  }
+  .featured-card .ftr-img {
+    aspect-ratio: 16 / 9;
+    max-height: 220px;
+    overflow: hidden;
+  }
+
+  /* List card → single column */
+  .list-card {
+    grid-template-columns: 1fr;
+  }
+  .list-card .lc-img {
+    aspect-ratio: 16 / 9;
+    max-height: 180px;
+    overflow: hidden;
+  }
+
+  /* Catalogue row */
+  .cat-row {
+    grid-template-columns: 24px 1fr auto;
+  }
+  .cat-row .cat-page {
+    display: none;
+  }
+
+  /* Article Variant A: drop marginalia to bottom */
+  .art-A {
+    padding: 0 20px 60px;
+  }
+  .art-A .art-body-wrap {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .art-A .marginalia {
+    position: static;
+    border-top: 1px solid var(--rule-soft);
+    padding-top: 20px;
+  }
+
+  /* Article Variant B: single column */
+  .art-B {
+    padding: 0 20px 60px;
+  }
+  .art-B .art-body {
+    column-count: 1;
+  }
+  .art-B .art-toc {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  /* Article Variant C */
+  .art-C {
+    padding: 0 20px 60px;
+  }
+
+  /* Article title block */
+  .art-title-block .art-title {
+    font-size: 30px;
+  }
+  .art-title-block .art-lat {
+    font-size: 17px;
+  }
+
+  /* Section header */
+  .sec-head .en {
+    font-size: 22px;
+  }
+
+  /* Prev/Next navigation */
+  .prev-next {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .prev-next .next {
+    text-align: left;
+  }
+}
 </style>
 
 </head>
